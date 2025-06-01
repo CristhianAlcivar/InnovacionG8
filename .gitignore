@@ -1,5 +1,6 @@
 venv/
-
+__pycache__/
+imagenes.zip
 # Ignorar contenido de processed y raw
 data/processed/*
 data/raw/*
