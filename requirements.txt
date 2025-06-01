@@ -1,0 +1,15 @@
+# Procesamiento de imágenes
+opencv-python
+albumentations
+
+# Deep Learning
+tensorflow==2.13.0  # o compatible con tu CPU y Python 3.10
+
+# Utilidades
+matplotlib
+scikit-learn
+tqdm
+
+# Visualización (opcional para dashboard)
+streamlit
+openpyxl

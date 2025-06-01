@@ -1,0 +1,9 @@
+venv/
+
+# Ignorar contenido de processed y raw
+data/processed/*
+data/raw/*
+
+# Pero mantener los directorios vacíos (opcional)
+!data/processed/.gitkeep
+!data/raw/.gitkeep
