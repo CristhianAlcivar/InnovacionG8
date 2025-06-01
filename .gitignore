@@ -1,10 +1,16 @@
+# Ignorar entorno virtual
 venv/
-__pycache__/
-imagenes.zip
-# Ignorar contenido de processed y raw
-data/processed/*
-data/raw/*
 
-# Pero mantener los directorios vacíos (opcional)
+# Ignorar cachés de Python
+__pycache__/
+
+# Ignorar archivos comprimidos
+imagenes.zip
+
+# Ignorar solo el contenido de estas carpetas, pero no las carpetas
+data/processed/**
+data/raw/**
+
+# Mantener los .gitkeep para conservar los directorios en Git
 !data/processed/.gitkeep
 !data/raw/.gitkeep
