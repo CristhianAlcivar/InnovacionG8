@@ -7,6 +7,8 @@ from pathlib import Path
 
 IMG_SIZE = (150, 150)
 BATCH_SIZE = 8
+VALIDATION_SPLIT = 0.2 # Proporción de datos para validación
+MODEL= 'mobilenet_model.tflite'    # 'mobilenet_model.tflite' recomendados para dispositivos con pocos recursos, 'mobilenet_model.h5' modelo completo de keras
 EPOCHS = 10
 DATA_DIR = Path(__file__).parent / 'data' / 'processed'
 MODEL_DIR = Path(__file__).parent / 'model'
@@ -26,7 +28,7 @@ def create_model():
     return model
 
 def main():
-    datagen = ImageDataGenerator(rescale=1/255., validation_split=0.2,
+    datagen = ImageDataGenerator(rescale=1/255., validation_split=VALIDATION_SPLIT,
                                  horizontal_flip=True, rotation_range=10)
 
     train = datagen.flow_from_directory(DATA_DIR, target_size=IMG_SIZE,
